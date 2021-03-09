@@ -1,0 +1,242 @@
+$breakpoint-mobile: 580px;
+$breakpoint-small: 280px;
+
+.contact {
+  width: 100%;
+  overflow: hidden;
+  .contactContainer {
+    max-width: 1350px;
+    margin: auto;
+    padding: 40px 10px 200px;
+    position: relative;
+    font-style: normal;
+
+    .contactCard {
+      max-width: 1280px;
+      min-height: 800px;
+      background: #202020;
+      border-radius: 20px;
+      margin: 20px auto 0;
+      padding: 40px;
+      transition: ease-in-out 0.3s;
+      .title {
+        font-weight: 600;
+        font-size: 36px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .contactWrap {
+        padding: 40px 10px;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .contactLeft {
+          margin-bottom: 10px;
+
+          .contactForm {
+            .contactField {
+              width: 400px;
+              margin-bottom: 24px;
+
+              .fieldWrap {
+                position: relative;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 10px;
+
+                .fieldTextarea,
+                .fieldInput {
+                  padding: 0 50px 0 30px;
+                  font-weight: 600;
+                  font-size: 18px;
+                  color: rgba(255, 255, 255, 0.8);
+                  width: 100%;
+                  background: none;
+                  border: none;
+                  outline: none;
+                }
+                .fieldInput {
+                  height: 60px;
+                }
+                .fieldTextarea {
+                  height: 200px;
+                  resize: none;
+                  padding-top: 16px;
+                }
+
+                .fieldIcon {
+                  position: absolute;
+                  right: 30px;
+                  top: 21px;
+                }
+              }
+            }
+
+            .contactButton {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              button {
+                max-width: 120px;
+                width: 100%;
+                height: 40px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 10px;
+                font-weight: 600;
+                font-size: 24px;
+                color: rgba(255, 255, 255, 0.8);
+                outline: none;
+                border: none;
+                cursor: pointer;
+              }
+              .fas {
+                color: rgba(255, 255, 255, 0.8);
+              }
+            }
+          }
+        }
+        .contactRight {
+          width: 400px;
+          margin: 0 10px;
+          .contactLine {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            .contactIcon {
+              flex: 1;
+            }
+            .contactText {
+              flex: 4;
+              font-weight: 500;
+              font-size: 24px;
+              color: rgba(255, 255, 255, 0.8);
+            }
+          }
+          .links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 195px;
+            padding-top: 300px;
+            margin: auto;
+          }
+        }
+      }
+
+      //
+      &:hover {
+        margin: 0 auto 0;
+        transition: ease-in-out 0.3s;
+        box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.25), 10px 20px 20px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .contact {
+    .contactContainer {
+      .contactCard {
+        padding: 40px 20px;
+        .title {
+          font-size: 18px;
+        }
+        .contactWrap {
+          padding: 40px 0;
+          .contactLeft {
+            .contactForm {
+              .contactField {
+                max-width: 400px;
+                width: 100%;
+                .fieldWrap {
+                  .fieldTextarea,
+                  .fieldInput {
+                    font-size: 18px;
+                  }
+                }
+              }
+              .contactButton {
+                button {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+          .contactRight {
+            margin: 60px 10px 0;
+            .contactLine {
+              .contactText {
+                font-size: 18px;
+              }
+            }
+            .links {
+              padding-top: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .contact {
+    .contactContainer {
+      .contactCard {
+        .title {
+          font-size: 14px;
+        }
+        .contactWrap {
+          padding: 20px 0;
+          .contactLeft {
+            .contactForm {
+              .contactField {
+                max-width: 400px;
+                width: 100%;
+                .fieldWrap {
+                  .fieldTextarea,
+                  .fieldInput {
+                    font-size: 14px;
+                  }
+                  .fieldInput {
+                    height: 40px;
+                  }
+                  .fieldTextarea {
+                    height: 180px;
+                  }
+                  .fieldIcon {
+                    right: 10px;
+                    top: 10px;
+                  }
+                }
+              }
+              .contactButton {
+                button {
+                  width: 40%;
+                  font-size: 14px;
+                  height: 30px;
+                }
+              }
+            }
+          }
+          .contactRight {
+            margin: 60px 10px 0;
+            .contactLine {
+              .contactIcon {
+                svg {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+              .contactText {
+                font-size: 14px;
+              }
+            }
+            .links {
+              padding-top: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
