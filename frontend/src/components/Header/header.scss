@@ -29,6 +29,7 @@ $breakpoint-small: 280px;
         font-size: 18px;
         font-weight: 800;
         color: rgba(255, 255, 255, 0.9);
+        cursor: pointer;
       }
     }
     .logo {
@@ -43,6 +44,7 @@ $breakpoint-small: 280px;
       );
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      cursor: default;
     }
     .socials {
       max-width: 100px;
@@ -66,7 +68,9 @@ $breakpoint-small: 280px;
       .menuWrap {
         display: block;
         flex: 1;
-
+        .menuButton {
+          cursor: pointer;
+        }
         .menu {
           color: aliceblue;
           position: absolute;
@@ -91,6 +95,10 @@ $breakpoint-small: 280px;
             font-weight: 800;
             font-size: 18px;
             color: rgba(255, 255, 255, 0.9);
+            .link {
+              color: rgba(255, 255, 255, 0.9);
+              cursor: pointer;
+            }
           }
           .menuLogo {
             padding-bottom: 20px;
@@ -98,6 +106,9 @@ $breakpoint-small: 280px;
             align-items: center;
             .subLogo1 {
               padding: 0 60px 0 140px;
+            }
+            .subLogo2 {
+              cursor: pointer;
             }
           }
         }

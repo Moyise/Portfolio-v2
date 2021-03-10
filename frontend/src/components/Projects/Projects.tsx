@@ -1,417 +1,258 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./projects.scss";
-import homepage from "../../img/homepage.png";
+import amazonClone from "../../img/amazonClone.png";
+import moyiseShop from "../../img/moyiseShop.png";
+import sneakers from "../../img/sneakers.png";
 import mongo from "../../img/mongo.png";
 import redux from "../../img/redux.png";
 import react from "../../img/react.png";
 import scss from "../../img/scss.png";
+import css3 from "../../img/css3.png";
 import javascript from "../../img/javascript.png";
 import typescript from "../../img/typescript.png";
 import nodejs from "../../img/nodejs.png";
 import express from "../../img/express.png";
+import stripe from "../../img/stripe.png";
 
 const Projects = () => {
   return (
     <>
-      <div className="project">
+      <div id="project" className="project">
         <div className="projectContainer">
           <div className="projectsWrap">
             <h1 className="title">Latest Projects</h1>
-            <p className="description">
-              Here you can find some of the projects that I created recently.
-            </p>
+            <p className="description">Here you can find some of my latest projects.</p>
             <div className="projectsCard">
               <div className="card">
                 <div className="imageWrap">
-                  <img className="image" src={homepage} alt="homepage" />
+                  <img className="image" src={amazonClone} alt="amazonClone" />
                 </div>
                 <div className="links">
-                  <span>Visit</span>
-                  <span>Code</span>
+                  <a
+                    href="https://mzon.online/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    Visit
+                  </a>
+                  <a
+                    href="https://github.com/Moyise/Amazon-Clone"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    Code
+                  </a>
                 </div>
                 <p className="projectTitle">Amazon Clone</p>
                 <p className="details">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Potenti
-                  suscipit nunc, dignissim hendrerit neque in non pulvinar.
+                  Inspired by Amazon, I made a complete E-commerce web app where you can
+                  add products to cart, choose the payment method, leave comments and
+                  more. This project is made using React, Redux, Typescript, ...
                 </p>
                 <div className="skills">
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={scss} alt="scss" />
                     </span>
-                    <span className="skill">SCSS</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={javascript} alt="javascript" />
-                    </span>
-                    <span className="skill">JAVASCRIPT</span>
+                    <span className="skill">Scss</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={react} alt="react" />
                     </span>
-                    <span className="skill">REACT</span>
+                    <span className="skill">React</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={typescript} alt="typescript" />
                     </span>
-                    <span className="skill">TYPESCRIPT</span>
+                    <span className="skill">Typescript</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={redux} alt="redux" />
                     </span>
-                    <span className="skill">REDUX</span>
+                    <span className="skill">Redux</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={nodejs} alt="nodejs" />
                     </span>
-                    <span className="skill">NODEJS</span>
+                    <span className="skill">Nodejs</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={express} alt="express" />
                     </span>
-                    <span className="skill">EXPRESS</span>
+                    <span className="skill">Express</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={mongo} alt="mongo" />
                     </span>
-                    <span className="skill">MONGODB</span>
+                    <span className="skill">MongoDB</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skillLogo">
+                      <img src={stripe} alt="stripe" />
+                    </span>
+                    <span className="skill">Stripe</span>
                   </div>
                 </div>
               </div>
 
               <div className="card">
                 <div className="imageWrap">
-                  <img className="image" src={homepage} alt="homepage" />
+                  <img className="image" src={sneakers} alt="sneakers" />
                 </div>
                 <div className="links">
-                  <span>Visit</span>
-                  <span>Code</span>
+                  <a
+                    href="https://mysneaker.herokuapp.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    Visit
+                  </a>
+                  <a
+                    href="https://github.com/Moyise/SneakersShop"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    Code
+                  </a>
                 </div>
-                <p className="projectTitle">Amazon Clone</p>
+                <p className="projectTitle">Sneakers Shop</p>
                 <p className="details">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Potenti
-                  suscipit nunc, dignissim hendrerit neque in non pulvinar.
+                  Sneakers Shop is a E-commerce web app that has the functionalities like
+                  creating products, deleting products, adding admin users and more. Made
+                  using React, Redux, NodeJs, Express, MongoDB, ...
                 </p>
                 <div className="skills">
                   <div className="skillWrap">
                     <span className="skillLogo">
-                      <img src={scss} alt="scss" />
+                      <img src={css3} alt="css3" />
                     </span>
-                    <span className="skill">SCSS</span>
+                    <span className="skill">Css3</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={javascript} alt="javascript" />
                     </span>
-                    <span className="skill">JAVASCRIPT</span>
+                    <span className="skill">Javascript</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={react} alt="react" />
                     </span>
-                    <span className="skill">REACT</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={typescript} alt="typescript" />
-                    </span>
-                    <span className="skill">TYPESCRIPT</span>
+                    <span className="skill">React</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={redux} alt="redux" />
                     </span>
-                    <span className="skill">REDUX</span>
+                    <span className="skill">Redux</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={nodejs} alt="nodejs" />
                     </span>
-                    <span className="skill">NODEJS</span>
+                    <span className="skill">NodeJs</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={express} alt="express" />
                     </span>
-                    <span className="skill">EXPRESS</span>
+                    <span className="skill">Express</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={mongo} alt="mongo" />
                     </span>
-                    <span className="skill">MONGODB</span>
+                    <span className="skill">MongoDB</span>
                   </div>
                 </div>
               </div>
 
               <div className="card">
                 <div className="imageWrap">
-                  <img className="image" src={homepage} alt="homepage" />
+                  <img className="image" src={moyiseShop} alt="moyiseShop" />
                 </div>
                 <div className="links">
-                  <span>Visit</span>
-                  <span>Code</span>
+                  <a
+                    href="https://moyiseshopapp.herokuapp.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    Visit
+                  </a>
+                  <a
+                    href="https://github.com/Moyise/moyiseshop"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    Code
+                  </a>
                 </div>
-                <p className="projectTitle">Amazon Clone</p>
+                <p className="projectTitle">Moyise Shop</p>
                 <p className="details">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Potenti
-                  suscipit nunc, dignissim hendrerit neque in non pulvinar.
+                  Moyise Shop is another Full Stack E-commerce web app inspired by
+                  BestBuy. It got functionalities like buying a product, leaving reviews
+                  and comments, etc. It's made with React,Redux, MongoDB, ...
                 </p>
                 <div className="skills">
                   <div className="skillWrap">
                     <span className="skillLogo">
-                      <img src={scss} alt="scss" />
+                      <img src={css3} alt="css3" />
                     </span>
-                    <span className="skill">SCSS</span>
+                    <span className="skill">Css3</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={javascript} alt="javascript" />
                     </span>
-                    <span className="skill">JAVASCRIPT</span>
+                    <span className="skill">Javascript</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={react} alt="react" />
                     </span>
-                    <span className="skill">REACT</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={typescript} alt="typescript" />
-                    </span>
-                    <span className="skill">TYPESCRIPT</span>
+                    <span className="skill">React</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={redux} alt="redux" />
                     </span>
-                    <span className="skill">REDUX</span>
+                    <span className="skill">Redux</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={nodejs} alt="nodejs" />
                     </span>
-                    <span className="skill">NODEJS</span>
+                    <span className="skill">NodeJs</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={express} alt="express" />
                     </span>
-                    <span className="skill">EXPRESS</span>
+                    <span className="skill">Express</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skillLogo">
                       <img src={mongo} alt="mongo" />
                     </span>
-                    <span className="skill">MONGODB</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="card">
-                <div className="imageWrap">
-                  <img className="image" src={homepage} alt="homepage" />
-                </div>
-                <div className="links">
-                  <span>Visit</span>
-                  <span>Code</span>
-                </div>
-                <p className="projectTitle">Amazon Clone</p>
-                <p className="details">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Potenti
-                  suscipit nunc, dignissim hendrerit neque in non pulvinar.
-                </p>
-                <div className="skills">
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={scss} alt="scss" />
-                    </span>
-                    <span className="skill">SCSS</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={javascript} alt="javascript" />
-                    </span>
-                    <span className="skill">JAVASCRIPT</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={react} alt="react" />
-                    </span>
-                    <span className="skill">REACT</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={typescript} alt="typescript" />
-                    </span>
-                    <span className="skill">TYPESCRIPT</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={redux} alt="redux" />
-                    </span>
-                    <span className="skill">REDUX</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={nodejs} alt="nodejs" />
-                    </span>
-                    <span className="skill">NODEJS</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={express} alt="express" />
-                    </span>
-                    <span className="skill">EXPRESS</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={mongo} alt="mongo" />
-                    </span>
-                    <span className="skill">MONGODB</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="card">
-                <div className="imageWrap">
-                  <img className="image" src={homepage} alt="homepage" />
-                </div>
-                <div className="links">
-                  <span>Visit</span>
-                  <span>Code</span>
-                </div>
-                <p className="projectTitle">Amazon Clone</p>
-                <p className="details">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Potenti
-                  suscipit nunc, dignissim hendrerit neque in non pulvinar.
-                </p>
-                <div className="skills">
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={scss} alt="scss" />
-                    </span>
-                    <span className="skill">SCSS</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={javascript} alt="javascript" />
-                    </span>
-                    <span className="skill">JAVASCRIPT</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={react} alt="react" />
-                    </span>
-                    <span className="skill">REACT</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={typescript} alt="typescript" />
-                    </span>
-                    <span className="skill">TYPESCRIPT</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={redux} alt="redux" />
-                    </span>
-                    <span className="skill">REDUX</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={nodejs} alt="nodejs" />
-                    </span>
-                    <span className="skill">NODEJS</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={express} alt="express" />
-                    </span>
-                    <span className="skill">EXPRESS</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={mongo} alt="mongo" />
-                    </span>
-                    <span className="skill">MONGODB</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="card">
-                <div className="imageWrap">
-                  <img className="image" src={homepage} alt="homepage" />
-                </div>
-                <div className="links">
-                  <span>Visit</span>
-                  <span>Code</span>
-                </div>
-                <p className="projectTitle">Amazon Clone</p>
-                <p className="details">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Potenti
-                  suscipit nunc, dignissim hendrerit neque in non pulvinar.
-                </p>
-                <div className="skills">
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={scss} alt="scss" />
-                    </span>
-                    <span className="skill">SCSS</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={javascript} alt="javascript" />
-                    </span>
-                    <span className="skill">JAVASCRIPT</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={react} alt="react" />
-                    </span>
-                    <span className="skill">REACT</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={typescript} alt="typescript" />
-                    </span>
-                    <span className="skill">TYPESCRIPT</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={redux} alt="redux" />
-                    </span>
-                    <span className="skill">REDUX</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={nodejs} alt="nodejs" />
-                    </span>
-                    <span className="skill">NODEJS</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={express} alt="express" />
-                    </span>
-                    <span className="skill">EXPRESS</span>
-                  </div>
-                  <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={mongo} alt="mongo" />
-                    </span>
-                    <span className="skill">MONGODB</span>
+                    <span className="skill">MongoDB</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="scroll">
+            <Link to="contact" smooth={true} duration={1000} className="scroll">
               <svg
                 width="24"
                 height="24"
@@ -424,7 +265,7 @@ const Projects = () => {
                   fill="#6ADBFF"
                 />
               </svg>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ $breakpoint-small: 280px;
   .projectContainer {
     max-width: 1350px;
     margin: auto;
-    padding: 40px 10px 200px;
+    padding: 100px 10px 200px;
     position: relative;
     font-style: normal;
     .projectsWrap {
@@ -64,14 +64,15 @@ $breakpoint-small: 280px;
             align-items: center;
             justify-content: space-evenly;
             padding-top: 10px;
-            span {
-              font-weight: 800;
+            .link {
+              font-weight: 600;
               font-size: 14px;
               color: rgba(255, 255, 255, 0.9);
               border: 1px solid #000000;
               box-sizing: border-box;
               border-radius: 10px;
               padding: 0 10px;
+              cursor: pointer;
             }
           }
           .projectTitle {
@@ -81,10 +82,10 @@ $breakpoint-small: 280px;
             padding: 10px;
           }
           .details {
-            font-weight: 800;
+            font-weight: normal;
             font-size: 14px;
-            color: rgba(255, 255, 255, 0.9);
-            padding: 14px 10px;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0 10px;
           }
           .skills {
             display: flex;

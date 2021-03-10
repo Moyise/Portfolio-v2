@@ -29,7 +29,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="contact">
+      <div id="contact" className="contact">
         <div className="contactContainer">
           <div className="contactCard">
             <h1 className="title">Contact</h1>
@@ -246,7 +246,11 @@ const Contact = () => {
                   <p className="contactText">Montreal, Canada</p>
                 </div>
                 <div className="links">
-                  <a href="/">
+                  <a
+                    href="https://www.linkedin.com/in/moyise-kane-a64a45117/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <svg
                       width="24"
                       height="24"
@@ -260,7 +264,7 @@ const Contact = () => {
                       />
                     </svg>
                   </a>
-                  <a href="/">
+                  <a href="https://twitter.com/0moyise" target="_blank" rel="noreferrer">
                     <svg
                       width="25"
                       height="24"
@@ -274,7 +278,7 @@ const Contact = () => {
                       />
                     </svg>
                   </a>
-                  <a href="/">
+                  <a href="https://github.com/Moyise" target="_blank" rel="noreferrer">
                     <svg
                       width="24"
                       height="24"

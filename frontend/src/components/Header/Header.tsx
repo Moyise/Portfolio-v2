@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSwipeable } from "react-swipeable";
+import { Link } from "react-scroll";
 import "./header.scss";
 
 const Header = () => {
@@ -101,21 +102,68 @@ const Header = () => {
                   </svg>
                 </div>
               </li>
-              <li className="menuLink">About</li>
-              <li className="menuLink">Projects</li>
-              <li className="menuLink">Contact</li>
+              <li className="menuLink">
+                <Link
+                  className="link"
+                  to="about"
+                  smooth={true}
+                  duration={1000}
+                  onClick={() => setOpen(false)}
+                >
+                  About
+                </Link>
+              </li>
+              <li className="menuLink">
+                <Link
+                  className="link"
+                  to="project"
+                  smooth={true}
+                  duration={1000}
+                  onClick={() => setOpen(false)}
+                >
+                  Projects
+                </Link>
+              </li>
+              <li className="menuLink">
+                <Link
+                  className="link"
+                  to="contact"
+                  smooth={true}
+                  duration={1000}
+                  onClick={() => setOpen(false)}
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
           <ul className="links">
-            <li className="link">About</li>
-            <li className="link">Projects</li>
-            <li className="link">Contact</li>
+            <li>
+              <Link className="link" to="about" smooth={true} duration={1000}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link className="link" to="project" smooth={true} duration={1000}>
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link className="link" to="contact" smooth={true} duration={1000}>
+                Contact
+              </Link>
+            </li>
           </ul>
           <div className="logo">MOYISE</div>
 
           <div className="socials">
-            <div className="social">
+            <a
+              href="https://twitter.com/0moyise"
+              target="_blank"
+              rel="noreferrer"
+              className="social"
+            >
               <svg
                 width="24"
                 height="24"
@@ -129,9 +177,14 @@ const Header = () => {
                   fillOpacity="0.9"
                 />
               </svg>
-            </div>
+            </a>
 
-            <div className="social">
+            <a
+              href="https://www.linkedin.com/in/moyise-kane-a64a45117/"
+              target="_blank"
+              rel="noreferrer"
+              className="social"
+            >
               <svg
                 width="24"
                 height="24"
@@ -145,7 +198,7 @@ const Header = () => {
                   fillOpacity="0.9"
                 />
               </svg>
-            </div>
+            </a>
           </div>
         </div>
       </div>

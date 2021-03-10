@@ -1,7 +1,12 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./footer.scss";
 
 const Footer = () => {
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <div className="footer">
@@ -11,13 +16,16 @@ const Footer = () => {
             <span>job opportunities.</span>
           </h1>
           <p className="subTitle">
-            <span>You need help with a project or you want to hire me?</span>
+            <span>You need help with a project or would you like to hire me?</span>
             <span>
-              Send me a <span className="link">message</span> and I’ll get back to you
-              ASAP.
+              Send me a{" "}
+              <Link to="contact" smooth={true} duration={1000} className="link">
+                message
+              </Link>{" "}
+              and I’ll get back to you ASAP.
             </span>
           </p>
-          <div className="scroll">
+          <div className="scroll" onClick={scrollTop}>
             <svg
               width="24"
               height="24"

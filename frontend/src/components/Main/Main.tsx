@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { Link } from "react-scroll";
 import "./main.scss";
 import hand from "../../img/hand.png";
 import Icon from "../../img/Icon.png";
 import BackToTop from "../BackToTop/BackToTop";
 
 const Main = () => {
+  useEffect(() => {
+    let tl2 = gsap.timeline();
+    tl2.from(".scroll", { y: 20, repeat: -1, duration: 2, yoyo: true }, "-=1");
+  }, []);
+
   return (
     <>
-      <div className="main">
+      <div id="main" className="main">
         <div className="mainContainer">
           <h1 className="mainTitle">
             <span>Hi, my name is</span>
@@ -32,7 +39,7 @@ const Main = () => {
               alt="Icon"
             />
           </div>
-          <div className="scroll">
+          <Link to="about" smooth={true} duration={1000} className="scroll">
             <svg
               width="24"
               height="24"
@@ -45,7 +52,7 @@ const Main = () => {
                 fill="#6ADBFF"
               />
             </svg>
-          </div>
+          </Link>
           <BackToTop />
         </div>
       </div>

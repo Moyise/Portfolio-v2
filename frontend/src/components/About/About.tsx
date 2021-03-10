@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./about.scss";
 
 const About = () => {
   return (
     <>
-      <div className="about">
+      <div id="about" className="about">
         <div className="aboutContainer">
           <div className="aboutCard">
             <h1 className="title">About</h1>
@@ -18,7 +19,11 @@ const About = () => {
               </p>
               <p className="bottom">
                 I will love to hear from you. Whether it’s a project, job opportunity, or
-                just a chat. Feel free to <span className="link">Contact me</span>.
+                just a chat. Feel free to{" "}
+                <Link to="contact" smooth={true} duration={1000} className="link">
+                  Contact me
+                </Link>
+                .
               </p>
             </div>
             <div className="skills">
@@ -54,7 +59,7 @@ const About = () => {
               </div>
             </div>
             <p className="last">and I’m always learning new technologies.</p>
-            <div className="scroll">
+            <Link to="project" smooth={true} duration={1000} className="scroll">
               <svg
                 width="24"
                 height="24"
@@ -67,7 +72,7 @@ const About = () => {
                   fill="#6ADBFF"
                 />
               </svg>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
