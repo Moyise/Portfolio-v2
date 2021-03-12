@@ -45,6 +45,7 @@ const Contact = () => {
                         required
                         className="fieldInput"
                         autoComplete="off"
+                        maxLength={50}
                         onChange={(e) => setName(e.target.value)}
                       />
                       <div className="fieldIcon">
@@ -77,6 +78,7 @@ const Contact = () => {
                         placeholder="Email"
                         required
                         className="fieldInput"
+                        maxLength={80}
                         onChange={(e) => setEmail(e.target.value)}
                       />
                       <div className="fieldIcon">
@@ -104,6 +106,7 @@ const Contact = () => {
                         placeholder="Subject"
                         required
                         className="fieldInput"
+                        maxLength={100}
                         onChange={(e) => setSubject(e.target.value)}
                       />
                       <div className="fieldIcon">

@@ -27,11 +27,12 @@ app.post("/", async (req, res) => {
     });
 
     // send mail with defined transport object
-    const info = await transporter.sendMail({
-      from: `"${name}" <${email}>`, // sender address
-      to: process.env.EMAIL_TO, // list of receivers
-      subject: `${subject}`, // Subject line
-      html: `
+    if (email) {
+      const info = await transporter.sendMail({
+        from: `"${name}" <${email}>`, // sender address
+        to: process.env.EMAIL_TO, // list of receivers
+        subject: `${subject}`, // Subject line
+        html: `
       <h3>Customer Info</h3>
       <ul>
       <li>Name: ${name}</li>
@@ -41,9 +42,10 @@ app.post("/", async (req, res) => {
       <p>${message}</p>
       
       `, // html body
-    });
+      });
 
-    res.json("Message has been sent.");
+      res.json("Message has been sent.");
+    }
   } catch (error) {
     console.log(error);
   }
