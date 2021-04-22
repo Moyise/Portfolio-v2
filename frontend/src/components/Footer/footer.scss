@@ -3,23 +3,24 @@ $breakpoint-mobile: 580px;
 $breakpoint-small: 280px;
 
 .footer {
-  width: 100%;
+  position: relative;
+  height: 100vh;
   overflow: hidden;
   .footerContainer {
-    max-width: 1350px;
     margin: auto;
-    padding: 40px 10px 160px;
-    position: relative;
+    max-width: 1450px;
+    padding-top: 160px;
     font-style: normal;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
 
     .title {
       display: flex;
       flex-direction: column;
       font-weight: 600;
-      font-size: 64px;
+      font-size: clamp(24px, 8vw, 72px);
       background: linear-gradient(to right, #edca85 19%, #0ab5cf 67%, #0816cf 100%);
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -56,14 +57,16 @@ $breakpoint-small: 280px;
       }
     }
     .copyright {
+      position: absolute;
+      bottom: 0;
+      left: 0;
       font-weight: normal;
       font-size: 18px;
       color: rgba(255, 255, 255, 0.8);
-      position: absolute;
-      bottom: 0;
       width: 100%;
       display: flex;
       justify-content: center;
+
       span {
         background: linear-gradient(142.52deg, #1ff5dc 11.22%, #e200d9 78.42%);
         background-clip: text;
@@ -77,7 +80,7 @@ $breakpoint-small: 280px;
   .footer {
     .footerContainer {
       .title {
-        font-size: 48px;
+        //font-size: 48px;
       }
     }
   }
@@ -86,9 +89,9 @@ $breakpoint-small: 280px;
 @media screen and (max-width: $breakpoint-mobile) {
   .footer {
     .footerContainer {
-      padding: 10px 10px 240px;
+      padding-top: 200px;
       .title {
-        font-size: 28px;
+        //font-size: 28px;
         padding-left: 10px;
       }
       .subTitle {
@@ -109,9 +112,8 @@ $breakpoint-small: 280px;
 @media screen and (max-width: $breakpoint-small) {
   .footer {
     .footerContainer {
-      padding: 10px 10px 140px;
       .title {
-        font-size: 24px;
+        //font-size: 24px;
         padding-left: 10px;
       }
       .subTitle {

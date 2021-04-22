@@ -8,16 +8,17 @@ $breakpoint-small: 280px;
     max-width: 1350px;
     margin: auto;
     padding: 100px 10px 200px;
-    position: relative;
     font-style: normal;
     .projectsWrap {
+      position: relative;
       max-width: 1280px;
       min-height: 800px;
       background: #202020;
       border-radius: 20px;
-      margin: 20px auto 0;
       padding: 40px;
       transition: ease-in-out 0.3s;
+      cursor: pointer;
+      overflow: hidden;
       .title {
         font-weight: 600;
         font-size: 36px;
@@ -39,16 +40,18 @@ $breakpoint-small: 280px;
           max-width: 300px;
           width: 100%;
           min-height: 500px;
-          background: rgba(0, 0, 0, 0.8);
+          background: rgba(0, 0, 0, 1);
           border-radius: 10px;
           margin: 20px 10px;
           transition: 0.3s;
+          z-index: 2;
           .imageWrap {
             max-width: 300px;
             width: 100%;
             height: 200px;
             background: rgba(0, 0, 0, 0.8);
             border-radius: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -65,10 +68,8 @@ $breakpoint-small: 280px;
             justify-content: space-evenly;
             padding-top: 10px;
             .link {
-              font-weight: 600;
-              font-size: 14px;
-              color: rgba(255, 255, 255, 0.9);
-              border: 1px solid #000000;
+              color: rgba(255, 255, 255, 0.8);
+              border: 1px solid rgba(255, 255, 255, 0.4);
               box-sizing: border-box;
               border-radius: 10px;
               padding: 0 10px;
@@ -78,10 +79,11 @@ $breakpoint-small: 280px;
           .projectTitle {
             font-weight: 800;
             font-size: 14px;
-            color: rgba(255, 138, 0, 0.9);
+            color: rgba(255, 255, 255, 0.9);
             padding: 10px;
           }
           .details {
+            min-height: 124px;
             font-weight: normal;
             font-size: 14px;
             color: rgba(255, 255, 255, 0.8);
@@ -93,11 +95,9 @@ $breakpoint-small: 280px;
             align-items: center;
             padding: 20px 10px;
             .skillWrap {
-              min-width: 40px;
-              height: 12px;
               display: flex;
               align-items: center;
-              justify-content: space-between;
+              justify-content: center;
               border: 1px solid rgba(255, 255, 255, 0.2);
               box-sizing: border-box;
               border-radius: 20px;
@@ -107,16 +107,8 @@ $breakpoint-small: 280px;
               cursor: default;
               .skill {
                 font-weight: 800;
-                font-size: 8px;
+                font-size: 10px;
                 color: rgba(255, 255, 255, 0.8);
-                padding-top: 2px;
-              }
-              .skillLogo {
-                img {
-                  width: 10px;
-                  height: 10px;
-                  object-fit: contain;
-                }
               }
             }
           }
@@ -124,9 +116,30 @@ $breakpoint-small: 280px;
           &:hover {
             transition: 0.3s;
             box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.25);
-            margin-top: -10px;
+            //margin-top: -10px;
           }
         }
+      }
+
+      .custom-shape-divider-bottom-1618821907 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .custom-shape-divider-bottom-1618821907 svg {
+        position: relative;
+        display: block;
+        width: calc(250% + 1.3px);
+        height: 500px;
+        transform: rotateY(180deg);
+      }
+
+      .custom-shape-divider-bottom-1618821907 .shape-fill {
+        fill: rgba(255, 255, 255, 0.1);
       }
 
       .scroll {
@@ -147,7 +160,7 @@ $breakpoint-small: 280px;
       }
 
       &:hover {
-        margin: 0 auto 0;
+        //margin: 0 auto 0;
         transition: ease-in-out 0.3s;
         box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.25), 10px 20px 20px rgba(0, 0, 0, 0.25);
       }
@@ -165,6 +178,11 @@ $breakpoint-small: 280px;
         }
         .description {
           font-size: 10px;
+        }
+
+        .custom-shape-divider-bottom-1618821907 svg {
+          width: calc(250% + 1.3px);
+          height: 75px;
         }
 
         .scroll {

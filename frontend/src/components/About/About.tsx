@@ -12,10 +12,10 @@ const About = () => {
             <div className="details">
               <p className="top">Hello!</p>
               <p className="middle">
-                My name is <span>Moyise Kane</span> and I’m a passionate Frontend Web
-                Developer using moderne technologies to build amazing products and
-                focusing on solving problems for different niches and different industries
-                using the power of technologies.
+                My name is <span>Kane</span> and I’m a passionate Frontend Web Developer
+                using moderne technologies to build amazing products and focusing on
+                solving problems for different niches and different industries using the
+                power of technologies.
               </p>
               <p className="bottom">
                 I will love to hear from you. Whether it’s a project, job opportunity, or
@@ -59,6 +59,19 @@ const About = () => {
               </div>
             </div>
             <p className="last">and I’m always learning new technologies.</p>
+            <div className="custom-shape-divider-bottom-1618821569">
+              <svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                  className="shape-fill"
+                ></path>
+              </svg>
+            </div>
             <Link to="project" smooth={true} duration={1000} className="scroll">
               <svg
                 width="24"

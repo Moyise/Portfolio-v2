@@ -2,18 +2,9 @@ import React from "react";
 import { Link } from "react-scroll";
 import "./projects.scss";
 import amazonClone from "../../img/amazonClone.png";
+import twitterClone from "../../img/twitterClone.png";
 import moyiseShop from "../../img/moyiseShop.png";
 import sneakers from "../../img/sneakers.png";
-import mongo from "../../img/mongo.png";
-import redux from "../../img/redux.png";
-import react from "../../img/react.png";
-import scss from "../../img/scss.png";
-import css3 from "../../img/css3.png";
-import javascript from "../../img/javascript.png";
-import typescript from "../../img/typescript.png";
-import nodejs from "../../img/nodejs.png";
-import express from "../../img/express.png";
-import stripe from "../../img/stripe.png";
 
 const Projects = () => {
   return (
@@ -35,7 +26,7 @@ const Projects = () => {
                     rel="noreferrer"
                     className="link"
                   >
-                    Visit
+                    <i className="far fa-eye"></i>
                   </a>
                   <a
                     href="https://github.com/Moyise/Amazon-Clone"
@@ -43,7 +34,7 @@ const Projects = () => {
                     rel="noreferrer"
                     className="link"
                   >
-                    Code
+                    <i className="fas fa-code"></i>
                   </a>
                 </div>
                 <p className="projectTitle">Amazon Clone</p>
@@ -54,52 +45,90 @@ const Projects = () => {
                 </p>
                 <div className="skills">
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={scss} alt="scss" />
-                    </span>
                     <span className="skill">Scss</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={react} alt="react" />
-                    </span>
                     <span className="skill">React</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={typescript} alt="typescript" />
-                    </span>
                     <span className="skill">Typescript</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={redux} alt="redux" />
-                    </span>
                     <span className="skill">Redux</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={nodejs} alt="nodejs" />
-                    </span>
                     <span className="skill">Nodejs</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={express} alt="express" />
-                    </span>
                     <span className="skill">Express</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={mongo} alt="mongo" />
-                    </span>
                     <span className="skill">MongoDB</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={stripe} alt="stripe" />
-                    </span>
                     <span className="skill">Stripe</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Mongoose</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card">
+                <div className="imageWrap">
+                  <img className="image" src={twitterClone} alt="twitterClone" />
+                </div>
+                <div className="links">
+                  <a
+                    href="https://mter.online/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    <i className="far fa-eye"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Moyise/Twitter-Clone"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    <i className="fas fa-code"></i>
+                  </a>
+                </div>
+                <p className="projectTitle">Twitter Clone</p>
+                <p className="details">
+                  This is a Twitter clone I made with Typescript/React and implemented a
+                  realtime messaging system using Socket.io and made some tests using Jest
+                  and React testing library(RTL)...
+                </p>
+                <div className="skills">
+                  <div className="skillWrap">
+                    <span className="skill">Scss</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">React</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Typescript</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Redux</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Nodejs</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Express</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">GraphQL</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Mongoose</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Socket.io</span>
                   </div>
                 </div>
               </div>
@@ -115,7 +144,7 @@ const Projects = () => {
                     rel="noreferrer"
                     className="link"
                   >
-                    Visit
+                    <i className="far fa-eye"></i>
                   </a>
                   <a
                     href="https://github.com/Moyise/SneakersShop"
@@ -123,7 +152,7 @@ const Projects = () => {
                     rel="noreferrer"
                     className="link"
                   >
-                    Code
+                    <i className="fas fa-code"></i>
                   </a>
                 </div>
                 <p className="projectTitle">Sneakers Shop</p>
@@ -134,46 +163,28 @@ const Projects = () => {
                 </p>
                 <div className="skills">
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={css3} alt="css3" />
-                    </span>
                     <span className="skill">Css3</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={javascript} alt="javascript" />
-                    </span>
                     <span className="skill">Javascript</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={react} alt="react" />
-                    </span>
                     <span className="skill">React</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={redux} alt="redux" />
-                    </span>
                     <span className="skill">Redux</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={nodejs} alt="nodejs" />
-                    </span>
                     <span className="skill">NodeJs</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={express} alt="express" />
-                    </span>
                     <span className="skill">Express</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={mongo} alt="mongo" />
-                    </span>
                     <span className="skill">MongoDB</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Mongoose</span>
                   </div>
                 </div>
               </div>
@@ -189,7 +200,7 @@ const Projects = () => {
                     rel="noreferrer"
                     className="link"
                   >
-                    Visit
+                    <i className="far fa-eye"></i>
                   </a>
                   <a
                     href="https://github.com/Moyise/moyiseshop"
@@ -197,7 +208,7 @@ const Projects = () => {
                     rel="noreferrer"
                     className="link"
                   >
-                    Code
+                    <i className="fas fa-code"></i>
                   </a>
                 </div>
                 <p className="projectTitle">Moyise Shop</p>
@@ -208,49 +219,45 @@ const Projects = () => {
                 </p>
                 <div className="skills">
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={css3} alt="css3" />
-                    </span>
                     <span className="skill">Css3</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={javascript} alt="javascript" />
-                    </span>
                     <span className="skill">Javascript</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={react} alt="react" />
-                    </span>
                     <span className="skill">React</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={redux} alt="redux" />
-                    </span>
                     <span className="skill">Redux</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={nodejs} alt="nodejs" />
-                    </span>
                     <span className="skill">NodeJs</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={express} alt="express" />
-                    </span>
                     <span className="skill">Express</span>
                   </div>
                   <div className="skillWrap">
-                    <span className="skillLogo">
-                      <img src={mongo} alt="mongo" />
-                    </span>
                     <span className="skill">MongoDB</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Mongoose</span>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="custom-shape-divider-bottom-1618821907">
+              <svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                  className="shape-fill"
+                ></path>
+              </svg>
             </div>
             <Link to="contact" smooth={true} duration={1000} className="scroll">
               <svg

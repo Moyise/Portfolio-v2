@@ -24,7 +24,7 @@ const Contact = () => {
     e.preventDefault();
 
     //Dispatch form
-    dispatch(formAction(name, subject, email, message));
+    dispatch(formAction(name.trim(), subject.trim(), email.trim(), message.trim()));
   };
 
   return (
@@ -170,7 +170,11 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="contactButton">
-                    <button type="submit">
+                    <button
+                      type="submit"
+                      disabled={!message.trim().length}
+                      className={!message ? "button disabled" : "button"}
+                    >
                       <span>Send</span>
                     </button>
                     {loading && <i className="fas fa-spinner fa-2x fa-spin"></i>}
@@ -250,7 +254,7 @@ const Contact = () => {
                 </div>
                 <div className="links">
                   <a
-                    href="https://www.linkedin.com/in/moyise-kane-a64a45117/"
+                    href="https://www.linkedin.com/in/m-kane-a64a45117/"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -297,6 +301,19 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
+            </div>
+            <div className="custom-shape-divider-top-1618822632">
+              <svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                  className="shape-fill"
+                ></path>
+              </svg>
             </div>
           </div>
         </div>

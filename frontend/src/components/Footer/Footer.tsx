@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
           <div className="copyright">
             <p>
-              &copy; moyise 20<span>21</span>
+              &copy; kane 20<span>21</span>
             </p>
           </div>
         </div>

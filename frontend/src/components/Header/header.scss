@@ -3,10 +3,12 @@ $breakpoint-mobile: 580px;
 $breakpoint-small: 280px;
 
 .header {
-  width: 100%;
-  position: sticky;
+  max-width: 1450px;
+  position: fixed;
   top: 0;
-  background: #191919;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(5px);
   z-index: 100;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -14,115 +16,104 @@ $breakpoint-small: 280px;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  .headerContainer {
-    max-width: 1350px;
-    height: 100px;
-    margin: auto;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-style: normal;
+
+  .menuWrap {
+    display: none;
+  }
+
+  .links {
     display: flex;
     align-items: center;
-    padding: 10px;
-    font-style: normal;
-    .menuWrap {
-      display: none;
-    }
-
-    .links {
-      display: flex;
-      align-items: center;
-      flex: 1;
-      .link {
-        padding-right: 40px;
-        font-size: 18px;
-        font-weight: 800;
-        color: rgba(255, 255, 255, 0.9);
-        cursor: pointer;
-      }
-    }
-    .logo {
-      flex: 1;
+    .link {
+      padding-right: 40px;
+      font-size: 18px;
       font-weight: 800;
-      font-size: 24px;
-      background: linear-gradient(
-        90deg,
-        #fa00ff 0%,
-        rgba(5, 0, 255, 0.55) 54.29%,
-        #ae005e 100%
-      );
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      cursor: default;
+      color: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
     }
-    .socials {
-      max-width: 100px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      .social {
-        padding-right: 10px;
+  }
+  .logo {
+    cursor: pointer;
+  }
+  .socials {
+    display: flex;
+    align-items: center;
+    .social {
+      &:first-child {
+        padding-left: 200px;
       }
+      &:last-child {
+        padding-left: 80px;
+      }
+    }
+    img {
+      opacity: 0.9;
     }
   }
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
   .header {
-    .headerContainer {
-      .links {
-        display: none;
+    .links {
+      display: none;
+    }
+    .menuWrap {
+      display: block;
+      flex: 1;
+      .menuButton {
+        cursor: pointer;
       }
-      .menuWrap {
-        display: block;
-        flex: 1;
-        .menuButton {
-          cursor: pointer;
-        }
-        .menu {
-          color: aliceblue;
-          position: absolute;
-          z-index: 101;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          max-width: 300px;
-          width: 100%;
-          height: 900px;
-          left: -80px;
-          top: 0px;
-          background: rgba(0, 0, 0, 1);
-          border-radius: 0px 20px 20px 0px;
-          padding: 30px 20px;
-          visibility: hidden;
-          opacity: 0;
-          transition: ease-in-out 0.3s;
-          .menuLink {
-            padding-top: 40px;
-            font-weight: 800;
-            font-size: 18px;
+      .menu {
+        color: aliceblue;
+        position: absolute;
+        z-index: 101;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 300px;
+        width: 100%;
+        height: 900px;
+        left: -80px;
+        top: 0px;
+        background: rgba(0, 0, 0, 1);
+        border-radius: 0px 20px 20px 0px;
+        padding: 30px 20px;
+        visibility: hidden;
+        opacity: 0;
+        transition: ease-in-out 0.3s;
+        .menuLink {
+          padding-top: 40px;
+          font-weight: 800;
+          font-size: 18px;
+          color: rgba(255, 255, 255, 0.9);
+          .link {
             color: rgba(255, 255, 255, 0.9);
-            .link {
-              color: rgba(255, 255, 255, 0.9);
-              cursor: pointer;
-            }
-          }
-          .menuLogo {
-            padding-bottom: 20px;
-            display: flex;
-            align-items: center;
-            .subLogo1 {
-              padding: 0 60px 0 140px;
-            }
-            .subLogo2 {
-              cursor: pointer;
-            }
+            cursor: pointer;
           }
         }
-        .menu.open {
-          visibility: visible;
-          opacity: 1;
-          transition: ease-in-out 0.3s;
-          left: 0;
+        .menuLogo {
+          padding-bottom: 20px;
+          display: flex;
+          align-items: center;
+          .subLogo1 {
+            padding: 0 60px 0 140px;
+          }
+          .subLogo2 {
+            cursor: pointer;
+          }
         }
+      }
+      .menu.open {
+        visibility: visible;
+        opacity: 1;
+        transition: ease-in-out 0.3s;
+        left: 0;
       }
     }
   }
@@ -130,25 +121,29 @@ $breakpoint-small: 280px;
 
 @media screen and (max-width: $breakpoint-mobile) {
   .header {
-    .headerContainer {
-      .logo {
-        font-size: 18px;
-      }
-      .socials {
-        max-width: 80px;
-        .social {
-          padding-right: 6px;
-          svg {
-            width: 18px;
-            height: 18px;
-          }
+    .socials {
+      .social {
+        padding-left: 60px;
+        img {
+          width: 18px;
+          height: 18px;
         }
       }
-      .menuWrap {
-        .menu {
-          .menuLink {
-            font-size: 14px;
-          }
+    }
+    .menuWrap {
+      .menu {
+        .menuLink {
+          font-size: 14px;
+        }
+      }
+    }
+    .socials {
+      .social {
+        &:first-child {
+          padding-left: 100px;
+        }
+        &:last-child {
+          padding-left: 80px;
         }
       }
     }
@@ -157,19 +152,31 @@ $breakpoint-small: 280px;
 
 @media screen and (max-width: $breakpoint-small) {
   .header {
-    .headerContainer {
-      .menuWrap {
-        .menu {
-          max-width: 240px;
-          width: 100%;
-          .menuLink {
-            font-size: 14px;
+    .logo {
+      width: 30px;
+      height: 30px;
+    }
+    .menuWrap {
+      .menu {
+        max-width: 240px;
+        width: 100%;
+        .menuLink {
+          font-size: 14px;
+        }
+        .menuLogo {
+          .subLogo1 {
+            padding: 0 60px 0 90px;
           }
-          .menuLogo {
-            .subLogo1 {
-              padding: 0 60px 0 90px;
-            }
-          }
+        }
+      }
+    }
+    .socials {
+      .social {
+        &:first-child {
+          padding-left: 60px;
+        }
+        &:last-child {
+          padding-left: 30px;
         }
       }
     }

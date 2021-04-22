@@ -17,10 +17,11 @@ $breakpoint-small: 280px;
       min-height: 800px;
       background: #202020;
       border-radius: 20px;
-      margin: 20px auto 0;
       padding: 40px;
       transition: ease-in-out 0.3s;
       position: relative;
+      cursor: pointer;
+      overflow: hidden;
       .title {
         font-weight: 600;
         font-size: 36px;
@@ -98,6 +99,27 @@ $breakpoint-small: 280px;
         color: rgba(71, 233, 255, 0.8);
       }
 
+      .custom-shape-divider-bottom-1618821569 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .custom-shape-divider-bottom-1618821569 svg {
+        position: relative;
+        display: block;
+        width: calc(175% + 1.3px);
+        height: 266px;
+        transform: rotateY(180deg);
+      }
+
+      .custom-shape-divider-bottom-1618821569 .shape-fill {
+        fill: rgba(255, 255, 255, 0.1);
+      }
+
       //
       .scroll {
         position: absolute;
@@ -115,13 +137,13 @@ $breakpoint-small: 280px;
         transition: 0.3s;
         &:hover {
           transition: 0.3s;
-          bottom: 66px;
+          //bottom: 66px;
           border: 4px solid rgba(126, 240, 255, 0.9);
         }
       }
 
       &:hover {
-        margin: 0 auto 0;
+        //margin: 0 auto 0;
         transition: ease-in-out 0.3s;
         box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.25), 10px 20px 20px rgba(0, 0, 0, 0.25);
       }
@@ -142,6 +164,11 @@ $breakpoint-small: 280px;
               flex: 5;
             }
           }
+        }
+
+        .custom-shape-divider-bottom-1618821569 svg {
+          width: calc(175% + 1.3px);
+          height: 75px;
         }
       }
     }

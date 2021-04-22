@@ -1,120 +1,91 @@
+$breakpoint-desktop: 1023px;
 $breakpoint-tablet: 768px;
 $breakpoint-mobile: 580px;
 $breakpoint-small: 280px;
 
 .main {
-  width: 100%;
   overflow: hidden;
   .mainContainer {
-    max-width: 1350px;
-    margin: auto;
-    padding: 140px 10px 200px;
+    height: 100vh;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //padding: 140px 10px 0;
     font-family: Poppins;
     font-style: normal;
-    z-index: 2;
-    .mainTitle {
-      max-width: 650px;
-      font-weight: 600;
-      font-size: 64px;
-      display: flex;
-      flex-direction: column;
-      background: linear-gradient(
-        to right,
-        #ffe5b1 6%,
-        #48cfcf 60%,
-        #ff4ddb 88%,
-        #4f60cf 100%
-      );
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .circle {
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      top: 100px;
-      right: 150px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 200px;
-      z-index: -10;
-    }
-    .helloCard {
-      position: absolute;
-      top: 100px;
-      right: 40px;
-      width: 160px;
-      height: 85px;
-      background: linear-gradient(90deg, #5c24fc 0%, #5c24fc 0.01%, #9d7aff 99.86%);
-      box-shadow: 0px 4px 4px rgba(0, 85, 251, 0.25);
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px 10px 0;
-      z-index: 0;
-      cursor: default;
-      transition: ease-in-out 0.3s;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      .greeting {
-        font-weight: 300;
-        font-size: 10px;
-        color: rgba(255, 255, 255, 0.9);
-      }
-      .name {
-        font-weight: bold;
-        font-size: 36px;
-        color: rgba(255, 255, 255, 0.6);
-      }
-      .hand {
-        position: absolute;
-        left: 10px;
-        top: 10px;
+    .hero-col {
+      //padding: clamp(1rem, 8vw, 5rem);
+      padding-top: 100px;
+      max-width: 80%;
+      .mainTitle {
+        font-size: clamp(24px, 8vw, 72px);
+        font-weight: 600;
+        background: linear-gradient(
+          to right,
+          #ccb1ff 6%,
+          #48cfcf 60%,
+          #ff4ddb 88%,
+          #4f60cf 100%
+        );
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
 
-    .textCard {
+    .circle {
+      width: clamp(250px, 30vw, 500px);
+    }
+    .rectangle1 {
       position: absolute;
+      right: 200px;
+      bottom: 160px;
       width: 100px;
       height: 100px;
-      top: 400px;
-      right: 520px;
-      z-index: -1;
       background: linear-gradient(
         180deg,
         rgba(0, 86, 253, 0.45) 0%,
         rgba(0, 194, 255, 0.72) 100%
       );
-      //box-shadow: 0px 4px 4px rgba(0, 252, 252, 0.1);
       border-radius: 20px;
     }
-    .profileCard {
+    .rectangle2 {
       position: absolute;
-      width: 150px;
+      top: 150px;
+      right: 200px;
+      width: 100px;
       height: 100px;
-      right: 50px;
-      top: 400px;
       background: linear-gradient(
-        135deg,
-        rgba(242, 99, 254, 0.9) 0%,
-        rgba(253, 220, 220, 0.63) 100%
+        180deg,
+        rgba(255, 255, 255, 0.7) 0%,
+        rgba(255, 0, 214, 0.594) 100%
       );
-      box-shadow: -2px 2px 2px rgba(0, 252, 252, 0.1);
-      border-radius: 20px;
-      z-index: -1;
-      .pic {
-        width: 60px;
-        height: 60px;
-        border-radius: 30px;
-        object-fit: cover;
-      }
+      border-radius: 100px;
     }
+    .custom-shape-divider-bottom-1618817524 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-bottom-1618817524 svg {
+      position: relative;
+      display: block;
+      width: calc(132% + 1.3px);
+      height: 201px;
+    }
+
+    .custom-shape-divider-bottom-1618817524 .shape-fill {
+      fill: rgba(255, 255, 255, 0.1);
+    }
+
     .scroll {
+      position: absolute;
+      bottom: 60px;
       width: 50px;
       height: 90px;
       border: 4px solid rgba(255, 255, 255, 0.9);
@@ -134,11 +105,34 @@ $breakpoint-small: 280px;
   }
 }
 
+@media screen and (max-width: $breakpoint-desktop) {
+  .main {
+    .mainContainer {
+      .mainTitle {
+        //font-size: 48px;
+      }
+      .circle,
+      .rectangle1,
+      .rectangle2 {
+        display: none;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $breakpoint-tablet) {
   .main {
     .mainContainer {
       .mainTitle {
-        font-size: 48px;
+        //font-size: 48px;
+      }
+
+      .custom-shape-divider-bottom-1618817524 svg {
+        width: calc(132% + 1.3px);
+        height: 75px;
+      }
+      .custom-shape-divider-bottom-1618817524 .shape-fill {
+        fill: rgba(255, 255, 255, 0.1);
       }
     }
   }
@@ -147,55 +141,11 @@ $breakpoint-small: 280px;
 @media screen and (max-width: $breakpoint-mobile) {
   .main {
     .mainContainer {
-      .mainTitle {
-        padding-top: 60px;
-        font-size: 28px;
-      }
-      .circle {
-        width: 340px;
-        height: 340px;
-        top: 160px;
-        right: 20px;
-      }
-      .helloCard {
-        width: 108px;
-        height: 57px;
-        left: 10px;
-        top: 50px;
-        .greeting {
-          font-size: 6px;
+      .hero-col {
+        padding-top: 0;
+        .mainTitle {
+          font-size: clamp(24px, 10vw, 72px);
         }
-        .name {
-          font-size: 14px;
-        }
-        .hand {
-          left: 6px;
-          top: 6px;
-          img {
-            width: 20px;
-            height: 20px;
-          }
-        }
-      }
-      .profileCard {
-        width: 79px;
-        height: 53px;
-        border-radius: 10px;
-        padding-top: 4px;
-        right: 30px;
-        img {
-          width: 30px;
-          height: 30px;
-        }
-        .pic {
-          width: 40px;
-          height: 40px;
-        }
-      }
-      .textCard {
-        width: 60px;
-        height: 60px;
-        left: 40px;
       }
       .scroll {
         margin-top: 240px;
@@ -208,42 +158,6 @@ $breakpoint-small: 280px;
 @media screen and (max-width: $breakpoint-small) {
   .main {
     .mainContainer {
-      .mainTitle {
-        padding-top: 10px;
-        font-size: 24px;
-      }
-      .circle {
-        width: 340px;
-        height: 340px;
-        top: 160px;
-        right: 20px;
-      }
-      .helloCard {
-        width: 108px;
-        height: 57px;
-        left: 10px;
-        top: 30px;
-      }
-      .profileCard {
-        width: 79px;
-        height: 53px;
-        border-radius: 10px;
-        padding-top: 4px;
-        right: 10px;
-        img {
-          width: 30px;
-          height: 30px;
-        }
-        .pic {
-          width: 40px;
-          height: 40px;
-        }
-      }
-      .textCard {
-        width: 60px;
-        height: 60px;
-        left: 10px;
-      }
       .scroll {
         margin-top: 180px;
         width: 40px;

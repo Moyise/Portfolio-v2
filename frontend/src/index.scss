@@ -13,4 +13,17 @@
 body {
   font-family: "Poppins", sans-serif;
   background: #191919;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #464646;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #707070;
+    border-radius: 10px;
+    &:hover {
+      background-color: #5c5c5c;
+    }
+  }
 }
