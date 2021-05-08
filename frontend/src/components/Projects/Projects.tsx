@@ -270,8 +270,18 @@ const Projects = () => {
                   </a>
                 </div>
                 <p className="projectTitle">Kane's</p>
-                <p className="details">Landing page template for businesses startups.</p>
+                <p className="details">
+                  Kane's is a landing template for businesses startups which anyone can
+                  use to present their business online. Made using Html, Css, Sass,
+                  Javascript and React.
+                </p>
                 <div className="skills">
+                  <div className="skillWrap">
+                    <span className="skill">Html</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Css</span>
+                  </div>
                   <div className="skillWrap">
                     <span className="skill">Scss</span>
                   </div>
@@ -307,8 +317,18 @@ const Projects = () => {
                   </a>
                 </div>
                 <p className="projectTitle">Eclips</p>
-                <p className="details">Landing page template for businesses startups.</p>
+                <p className="details">
+                  Eclips is a landing template for businesses startups which anyone can
+                  use to present their business online. Made using Html, Css, Sass,
+                  Javascript and React.
+                </p>
                 <div className="skills">
+                  <div className="skillWrap">
+                    <span className="skill">Html</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Css</span>
+                  </div>
                   <div className="skillWrap">
                     <span className="skill">Scss</span>
                   </div>
