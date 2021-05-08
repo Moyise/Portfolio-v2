@@ -13,7 +13,7 @@ const About = () => {
               <p className="top">Hello!</p>
               <p className="middle">
                 My name is <span>Kane</span> and I’m a passionate Frontend Web Developer
-                using moderne technologies to build amazing products and focusing on
+                using modern technologies to build amazing products and focusing on
                 solving problems for different niches and different industries using the
                 power of technologies.
               </p>

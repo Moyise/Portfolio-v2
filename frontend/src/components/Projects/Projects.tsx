@@ -5,6 +5,8 @@ import amazonClone from "../../img/amazonClone.png";
 import twitterClone from "../../img/twitterClone.png";
 import moyiseShop from "../../img/moyiseShop.png";
 import sneakers from "../../img/sneakers.png";
+import KaN from "../../img/KaN.png";
+import Eclips from "../../img/Eclips.png";
 
 const Projects = () => {
   return (
@@ -241,6 +243,80 @@ const Projects = () => {
                   </div>
                   <div className="skillWrap">
                     <span className="skill">Mongoose</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card">
+                <div className="imageWrap">
+                  <img className="image" src={KaN} alt="KaN" />
+                </div>
+                <div className="links">
+                  <a
+                    href="https://confident-ride-e2259d.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    <i className="far fa-eye"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Moyise/KaneS"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    <i className="fas fa-code"></i>
+                  </a>
+                </div>
+                <p className="projectTitle">Kane's</p>
+                <p className="details">Landing page template for businesses startups.</p>
+                <div className="skills">
+                  <div className="skillWrap">
+                    <span className="skill">Scss</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Javascript</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">React</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card">
+                <div className="imageWrap">
+                  <img className="image" src={Eclips} alt="Eclips" />
+                </div>
+                <div className="links">
+                  <a
+                    href="https://musing-jones-ae768f.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    <i className="far fa-eye"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Moyise/Eclips"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    <i className="fas fa-code"></i>
+                  </a>
+                </div>
+                <p className="projectTitle">Eclips</p>
+                <p className="details">Landing page template for businesses startups.</p>
+                <div className="skills">
+                  <div className="skillWrap">
+                    <span className="skill">Scss</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Javascript</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">React</span>
                   </div>
                 </div>
               </div>
