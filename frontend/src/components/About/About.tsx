@@ -53,8 +53,8 @@ const About = () => {
               <div className="middle">
                 <p className="left">Other:</p>
                 <p className="right">
-                  Git, Github, NGINX, Ubuntu, DigitalOcean, Heroku,
-                  <span> Unit Testing(Jest and React Testing Library)</span>.
+                  Git, GitHub, NGINX, Ubuntu, DigitalOcean, Heroku,
+                  <span> Unit Testing (Jest and React Testing Library)</span>.
                 </p>
               </div>
             </div>

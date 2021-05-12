@@ -7,6 +7,7 @@ import moyiseShop from "../../img/moyiseShop.png";
 import sneakers from "../../img/sneakers.png";
 import KaN from "../../img/KaN.png";
 import Eclips from "../../img/Eclips.png";
+import OriginX from "../../img/OriginX.png";
 
 const Projects = () => {
   return (
@@ -101,8 +102,8 @@ const Projects = () => {
                 <p className="projectTitle">Twitter Clone</p>
                 <p className="details">
                   This is a Twitter clone I made with Typescript/React and implemented a
-                  realtime messaging system using Socket.io and made some tests using Jest
-                  and React testing library(RTL)...
+                  real-time messaging system using Socket.io and made some tests using
+                  Jest and React testing library(RTL)...
                 </p>
                 <div className="skills">
                   <div className="skillWrap">
@@ -159,7 +160,7 @@ const Projects = () => {
                 </div>
                 <p className="projectTitle">Sneakers Shop</p>
                 <p className="details">
-                  Sneakers Shop is a E-commerce web app that has the functionalities like
+                  Sneakers Shop is an E-commerce web app that has the functionalities like
                   creating products, deleting products, adding admin users and more. Made
                   using React, Redux, NodeJs, Express, MongoDB, ...
                 </p>
@@ -217,7 +218,7 @@ const Projects = () => {
                 <p className="details">
                   Moyise Shop is another Full Stack E-commerce web app inspired by
                   BestBuy. It got functionalities like buying a product, leaving reviews
-                  and comments, etc. It's made with React,Redux, MongoDB, ...
+                  and comments, etc. It's made with React, Redux, MongoDB, ...
                 </p>
                 <div className="skills">
                   <div className="skillWrap">
@@ -272,7 +273,7 @@ const Projects = () => {
                 <p className="projectTitle">Kane's</p>
                 <p className="details">
                   Kane's is a landing template for businesses startups which anyone can
-                  use to present their business online. Made using Html, Css, Sass,
+                  use to present their business online. Made using Html, CSS, Sass,
                   Javascript and React.
                 </p>
                 <div className="skills">
@@ -319,7 +320,7 @@ const Projects = () => {
                 <p className="projectTitle">Eclips</p>
                 <p className="details">
                   Eclips is a landing template for businesses startups which anyone can
-                  use to present their business online. Made using Html, Css, Sass,
+                  use to present their business online. Made using Html, CSS, Sass,
                   Javascript and React.
                 </p>
                 <div className="skills">
@@ -331,6 +332,53 @@ const Projects = () => {
                   </div>
                   <div className="skillWrap">
                     <span className="skill">Scss</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Javascript</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">React</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card">
+                <div className="imageWrap">
+                  <img className="image" src={OriginX} alt="OriginX" />
+                </div>
+                <div className="links">
+                  <a
+                    href="https://optimistic-liskov-c600cc.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    <i className="far fa-eye"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Moyise/OriginX"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    <i className="fas fa-code"></i>
+                  </a>
+                </div>
+                <p className="projectTitle">OriginX</p>
+                <p className="details">
+                  OriginX is a landing template for businesses startups which anyone can
+                  use to present their business online. Made using Html, TailwindCSS,
+                  Sass, Javascript and React.
+                </p>
+                <div className="skills">
+                  <div className="skillWrap">
+                    <span className="skill">Html</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">Sass</span>
+                  </div>
+                  <div className="skillWrap">
+                    <span className="skill">TailwindCSS</span>
                   </div>
                   <div className="skillWrap">
                     <span className="skill">Javascript</span>
