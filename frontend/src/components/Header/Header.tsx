@@ -171,7 +171,7 @@ const Header = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/m-kane-a64a45117/"
+            href="https://www.linkedin.com/in/mahmoud-kane/"
             target="_blank"
             rel="noreferrer"
             className="social"

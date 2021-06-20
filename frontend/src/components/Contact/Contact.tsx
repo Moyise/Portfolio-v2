@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { formAction } from "../../actions/formActions";
+import { useSelector } from "react-redux";
+// import { formAction } from "../../actions/formActions";
+import emailjs from "emailjs-com";
 import { reducerState } from "../../store";
 import "./contact.scss";
 
@@ -11,20 +12,40 @@ interface IForm {
 
 const Contact = () => {
   const form: IForm = useSelector((state: reducerState) => state.form);
-  const { loading, success } = form;
+  // const { loading, success } = form;
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (e: any) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
+    setLoading(true);
 
     //Dispatch form
-    dispatch(formAction(name.trim(), subject.trim(), email.trim(), message.trim()));
+    // dispatch(formAction(name.trim(), subject.trim(), email.trim(), message.trim()));
+
+    emailjs
+      .sendForm("gmail", "template_8h9z6xr", e.target, "user_EgxTXaUit7gbJjbI9r307")
+      .then(
+        (result) => {
+          setLoading(false);
+          setSuccess(true);
+          setName("");
+          setEmail("");
+          setSubject("");
+          // console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
   };
 
   return (
@@ -35,13 +56,14 @@ const Contact = () => {
             <h1 className="title">Contact</h1>
             <div className="contactWrap">
               <div className="contactLeft">
-                <form className="contactForm" onSubmit={handleSubmit}>
+                <form className="contactForm" onSubmit={sendEmail}>
                   <div className="contactField">
                     <div className="fieldWrap">
                       <input
                         type="text"
                         name="name"
                         placeholder="Name"
+                        value={name}
                         required
                         className="fieldInput"
                         autoComplete="off"
@@ -74,8 +96,9 @@ const Contact = () => {
                     <div className="fieldWrap">
                       <input
                         type="email"
-                        name="email"
+                        name="user_email"
                         placeholder="Email"
+                        value={email}
                         required
                         className="fieldInput"
                         maxLength={80}
@@ -104,6 +127,8 @@ const Contact = () => {
                         type="text"
                         name="subject"
                         placeholder="Subject"
+                        value={subject}
+                        autoComplete="off"
                         required
                         className="fieldInput"
                         maxLength={100}
@@ -254,7 +279,7 @@ const Contact = () => {
                 </div>
                 <div className="links">
                   <a
-                    href="https://www.linkedin.com/in/m-kane-a64a45117/"
+                    href="https://www.linkedin.com/in/mahmoud-kane/"
                     target="_blank"
                     rel="noreferrer"
                   >
